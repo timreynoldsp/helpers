@@ -21,15 +21,12 @@ echo "==========================================================================
 
 read -p "OLA User to create [ola]:" olad_user
 olad_user=${olad_user:-ola}
-echo $olad_user
 
 useradd $olad_user
 
 apt -y update
 apt -y upgrade
 apt -y install libcppunit-1.15-0 libcppunit-dev uuid-dev pkg-config libncurses5-dev libtool autoconf automake g++ libmicrohttpd-dev  protobuf-compiler  libprotobuf-dev libprotoc-dev zlib1g-dev bison flex make libftdi-dev libftdi1 libusb-1.0-0-dev liblo-dev libavahi-client-dev libmicrohttpd12  libprotobuf-lite32 python3-protobuf python3-numpy git
-
-# Run the following as olad_user
 
 cd /home/$olad_user
 su $olad_user -c "git clone https://github.com/OpenLightingProject/ola.git ola"
