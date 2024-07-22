@@ -22,7 +22,7 @@ echo "==========================================================================
 read -p "OLA User to create [ola]:" olad_user
 olad_user=${olad_user:-ola}
 
-useradd $olad_user
+useradd -m $olad_user
 
 apt -y update
 apt -y upgrade
